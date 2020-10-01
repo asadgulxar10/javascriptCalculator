@@ -5,26 +5,26 @@ $(document).ready(() => {
 	let inputs = [];					// array that contains the equation. each element is either number or operator
 	$("button").click((event) => {
 		let btn = $(event.target).text();
-		switch(btn) {
-			case "AC": {
+		switch(btn) { //do not need to add {} in each case
+			case "AC": 
 				inputs = [];
 				update();
 				break;
-			}
-			case "CE": {
+			
+			case "CE": 
 				inputs.pop();
 				update();
 				break;
-			}
-			case "=": {
+			
+			case "=": 
 				getTotal();
 				break;
-			}
-			default: {
+			
+			default: 
 				getVal(btn);
 				update();
 				break;
-			}
+			
 		}
 	})
 	
